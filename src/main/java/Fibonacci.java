@@ -4,6 +4,14 @@ public class Fibonacci {
 
     private static final Logger log = Logger.getLogger(String.valueOf(Fibonacci.class));
 
+    /**
+     *  n = 10
+     *  time = 27
+     *  n = 10,000,000.0
+     *  time = 35
+     *
+     *  the complexity of the algorithm = O(log n)
+     */
     public long iterativeMethod(int n) {
         long result = 0;
 
@@ -22,6 +30,14 @@ public class Fibonacci {
         return current;
     }
 
+    /**
+     *  n = 10
+     *  time = 25
+     *  n = 50
+     *  time = 53035
+     *
+     *  the complexity of the algorithm = O(N power N)
+     */
     public long recursiveMethod(int n) {
         long result = 0;
         if (n <= 1) {
@@ -33,6 +49,14 @@ public class Fibonacci {
         return result;
     }
 
+    /**
+     *  n = 10
+     *  time = 26
+     *  n = 10,000,000.0
+     *  time = 68
+     *
+     *  the complexity of the algorithm = O(log n)
+     */
     public long dynamicMethod(int n) {
         int[] resArr = new int[n + 1];
         resArr[0] = 0;
