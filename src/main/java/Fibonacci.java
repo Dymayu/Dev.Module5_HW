@@ -75,12 +75,17 @@ public class Fibonacci {
         Fibonacci fibonacci = new Fibonacci();
 
         long startTime = System.currentTimeMillis();
+
         //log.info("Fibonacci iteratived method = " + fibonacci.iterativeMethod(10000000));
         //log.info("Fibonacci recursive method = " + fibonacci.recursiveMethod(50));
-        log.info("Fibonacci dynamic method = " + fibonacci.dynamicMethod(10000000));
+        log.info("Fibonacci dynamic method = " + fibonacci.dynamicMethod(10000));
 
         long endTime = System.currentTimeMillis();
+        long usedMemory = Runtime.getRuntime().totalMemory() - Runtime.getRuntime().freeMemory();
+
         log.info("TIME = " + (endTime - startTime));
+        log.info("Memory used = " + usedMemory);
+
 
     }
 }
